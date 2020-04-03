@@ -7,7 +7,7 @@
 ## Screenshots of viz ideas
 ![Covid Cases screen shot](images/CovidCasesByCountyScreenShot.png)
 ![Index Page idea](images/IndexPageIdea.png)
-![Unemployment Viz idea](UnemploymentVizIdea.png)
+![Unemployment Viz idea](UnemploymentVizIdea.PNG)
 
 
 ## Final design scetch
