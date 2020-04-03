@@ -1,10 +1,10 @@
-# **Look at Unemployment numbers from 2008-current and the number of Coronovirus cases - by Indiana County**
+# <p align="center"> **Look at Unemployment numbers from 2008-current and the number of Coronovirus cases - by Indiana County**</p>
 
 ## Data sources
 - BLS
 - Google Conorovirus
 
-## Screenshots of viz ideas
+## <p align="center"> **Screenshots of viz ideas**  </p>
 
 #### Covid Cases
 ![Covid Cases screen shot](images/CovidCasesByCountyScreenShot.png)
