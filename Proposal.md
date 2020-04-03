@@ -5,6 +5,7 @@
 - Google Conorovirus
 
 ## Screenshots of viz ideas
+![Covid Cases screen shot]("images/CovidCasesByCountyScreenShot.png")
 
 ## Final design scetch
 - Home page - Indiana choropleth
