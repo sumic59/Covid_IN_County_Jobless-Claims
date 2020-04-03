@@ -8,22 +8,22 @@
 - SAVI Indiana Coronavirus Data Hub (https://polis.iupui.edu/savi-indiana-coronavirus-data-hub/)
 - Kaggle - U.S. Unemployment Rate by County, 1990-2016 (https://www.kaggle.com/jayrav13/unemployment-by-county-us)
 
-## <p align="center"> **Screenshots of viz ideas**  </p>
-
-#### Covid Cases
-![Covid Cases screen shot](images/CovidCasesByCountyScreenShot.png)
-
-#### Index Page
-![Index Page idea](images/IndexPageIdea.png)
-
-#### Unemployment Viz
-![Unemployment Viz idea](images/UnemploymentVizIdea.PNG)
-
 #### Indiana Unemployment 1
 ![IN UI 1](images/IN_UI_1.png)
 
 #### Indiana Unemployment 2
 ![IN UI 2](images/IN_UI_2.png)
+
+## <p align="center"> **Screenshots of viz ideas**  </p>
+
+#### Covid Cases
+![Covid Cases screen shot](images/CovidCasesByCountyScreenShot.png)
+
+#### Unemployment Viz
+![Unemployment Viz idea](images/UnemploymentVizIdea.PNG)
+
+#### Index Page
+![Index Page idea](images/IndexPageIdea.png)
 
 
 ## Final design scetch
