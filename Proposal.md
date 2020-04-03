@@ -14,10 +14,10 @@
 #### Indiana Unemployment 2
 ![IN UI 2](images/IN_UI_2.png)
 
-## <p align="center"> **Screenshots of viz ideas**  </p>
-
 #### Covid Cases
 ![Covid Cases screen shot](images/CovidCasesByCountyScreenShot.png)
+
+## <p align="center"> **Screenshots of viz ideas**  </p>
 
 #### Unemployment Viz
 ![Unemployment Viz idea](images/UnemploymentVizIdea.PNG)
@@ -41,6 +41,7 @@
 - HTML/CSS
 - Java Script
 - GitHub
+- Java Script library ???
 
 ## Authors
 - Sumi Justin
