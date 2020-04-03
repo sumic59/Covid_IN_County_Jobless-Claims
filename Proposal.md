@@ -2,7 +2,7 @@
 
 ## Data sources
 - United States Bureau of Labor Statistics (BLS)
-- Google Conorovirus
+- SAVI Indiana Coronavirus Data Hub (https://polis.iupui.edu/savi-indiana-coronavirus-data-hub/)
 
 ## <p align="center"> **Screenshots of viz ideas**  </p>
 
