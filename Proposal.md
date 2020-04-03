@@ -15,6 +15,12 @@
 #### Unemployment Viz
 ![Unemployment Viz idea](images/UnemploymentVizIdea.PNG)
 
+#### Indiana Unemployment 1
+![IN UI 1](images/IN_UI_1.png)
+
+#### Indiana Unemployment 2
+![IN UI 2](images/IN_UI_2.png)
+
 
 ## Final design scetch
 - Home page - Indiana choropleth
