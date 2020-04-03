@@ -5,8 +5,14 @@
 - Google Conorovirus
 
 ## Screenshots of viz ideas
+
+#### Covid Cases
 ![Covid Cases screen shot](images/CovidCasesByCountyScreenShot.png)
+
+#### Index Page
 ![Index Page idea](images/IndexPageIdea.png)
+
+#### Unemployment Viz
 ![Unemployment Viz idea](images/UnemploymentVizIdea.PNG)
 
 
