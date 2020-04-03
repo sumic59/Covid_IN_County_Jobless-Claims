@@ -1,8 +1,12 @@
 # <p align="center"> **Look at Unemployment numbers from 2008-current and the number of Coronovirus cases - by Indiana County**</p>
+- Is there a relationship between increases in unemployment and the number of reported Coronovirus cases, by county
+- Are there any differences between rural and urban counties
+- Display a timeseries plot showing unemployment rate decreases/increases along with increases in Coronvirus cases
 
-## Data sources
-- United States Bureau of Labor Statistics (BLS)
+## <p align="center"> **Data sources** </p>
+- United States Bureau of Labor Statistics (BLS) (https://data.bls.gov/PDQWeb/la)
 - SAVI Indiana Coronavirus Data Hub (https://polis.iupui.edu/savi-indiana-coronavirus-data-hub/)
+- Kaggle - U.S. Unemployment Rate by County, 1990-2016 (https://www.kaggle.com/jayrav13/unemployment-by-county-us)
 
 ## <p align="center"> **Screenshots of viz ideas**  </p>
 
