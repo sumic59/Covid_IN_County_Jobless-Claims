@@ -1,7 +1,7 @@
 # <p align="center"> **Look at Unemployment numbers from 2008-current and the number of Coronovirus cases - by Indiana County**</p>
 
 ## Data sources
-- BLS
+- United States Bureau of Labor Statistics (BLS)
 - Google Conorovirus
 
 ## <p align="center"> **Screenshots of viz ideas**  </p>
@@ -28,4 +28,19 @@
 
 ## GitHub
 - https://github.com/sumic59/Project-2
+
+## Tools Used
+- D3.js
+- Leaflet or Plotly
+- Python Flask
+- MongoDb or SQL or SQLite    ---UPDATE
+- HTML/CSS
+- Java Script
+- GitHub
+
+## Authors
+- Sumi Justin
+- Nirmal Jacob
+- Michael Davis
+- Emmanuel Olofinkua
 
