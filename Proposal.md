@@ -30,7 +30,7 @@
 - 4(ish) county pages
 
 - County Breakdown
-    * Sumi: Warrick, Boone, Lake
+    * Sumi: Boone, Warrick, Lake
     * Emmaneual:  Hamilton, Allen, Hendricks
     * Nirmal:  Johnson, Decatur, Vanderburgh
     * Michael:  Marion, Monroe, St. Joseph
