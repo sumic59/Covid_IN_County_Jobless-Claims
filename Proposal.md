@@ -30,6 +30,12 @@
 - Home page - Indiana choropleth
 - 4(ish) county pages
 
+- County Breakdown
+    * Sumi: Warrick, Boone, Lake
+    * Emmaneual:  Hamilton, Allen, Hendricks
+    * Nirmal:  
+    * Michael:  Marion, Monroe, St. Joseph
+
 ## GitHub
 - https://github.com/sumic59/Project-2
 
