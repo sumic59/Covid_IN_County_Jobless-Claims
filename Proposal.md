@@ -25,7 +25,6 @@
 #### Index Page
 ![Index Page idea](images/IndexPageIdea.png)
 
-
 ## Final design scetch
 - Home page - Indiana choropleth
 - 4(ish) county pages
@@ -33,8 +32,17 @@
 - County Breakdown
     * Sumi: Warrick, Boone, Lake
     * Emmaneual:  Hamilton, Allen, Hendricks
-    * Nirmal:  
+    * Nirmal:  Johnson, Decatur, Vanderburgh
     * Michael:  Marion, Monroe, St. Joseph
+
+- Timeline
+    * By Tuesday - read data (CSV or API), ETL, create county plots (all in Python)
+    * Tuesday class - cover plots, begin building web pages (Leaflet/Plotly, Flask, MongoDb, HTML/CSS, JavaScript)
+        - select a new JavaScript library
+    * Wednesday - Thursday - finish building web pages, build statewide landing page
+    * Thursday class - complete pages, test, begin presentation prep
+    * Friday - practice for 10 minute presentation 
+
 
 ## GitHub
 - https://github.com/sumic59/Project-2
@@ -45,7 +53,7 @@
 - Python Flask
 - MongoDb or SQL or SQLite    ---UPDATE
 - HTML/CSS
-- Java Script
+- JavaScript
 - GitHub
 - Java Script library ???
 
