@@ -2,6 +2,12 @@
 config.js
 config.py
 
+# ----------------------------------------
+# Files for this project to ignore
+MRD_Unemployment_And_Covid_Data_v2.ipynb
+temporary
+# ----------------------------------------
+
 # Word temporary
 ~$*.doc*
 
