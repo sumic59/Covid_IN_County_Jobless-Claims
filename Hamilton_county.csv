@@ -1,0 +1,21 @@
+﻿IDWD Research and Analysis,,,,,,,,
+,,,,,,,,
+Unemployment Insurance (UI) Claims,,,,,,,,
+,,,,,,,,
+Geography,State Fips,County Fips,Year,Month,Month Code,week,Initial Claims,Pct. Change from Same
+,,,,,,,,Week Last Year
+"Hamilton County, IN",18,57,2020,January,1,1,106,-0.90%
+"Hamilton County, IN",18,57,2020,January,1,2,127,41.10%
+"Hamilton County, IN",18,57,2020,January,1,3,80,-12.10%
+"Hamilton County, IN",18,57,2020,January,1,4,77,32.80%
+"Hamilton County, IN",18,57,2020,February,2,5,61,-3.20%
+"Hamilton County, IN",18,57,2020,February,2,6,69,6.20%
+"Hamilton County, IN",18,57,2020,February,2,7,68,21.40%
+"Hamilton County, IN",18,57,2020,February,2,8,51,8.50%
+"Hamilton County, IN",18,57,2020,February,2,9,66,32.00%
+"Hamilton County, IN",18,57,2020,March,3,10,52,-14.80%
+"Hamilton County, IN",18,57,2020,March,3,11,83,29.70%
+"Hamilton County, IN",18,57,2020,March,3,12,"2,247",3985.50%
+"Hamilton County, IN",18,57,2020,March,3,13,"3,554",6868.60%
+,,,,,,,,
+This table was produced by Indiana Department of Workforce Development - Research and Analysis :4/7/2020 5:31:41 PM,,,,,,,,
