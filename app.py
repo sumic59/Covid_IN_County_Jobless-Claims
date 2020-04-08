@@ -2,19 +2,52 @@
  "cells": [
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 6,
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      " * Serving Flask app \"__main__\" (lazy loading)\n",
+      " * Environment: production\n",
+      "   WARNING: This is a development server. Do not use it in a production deployment.\n",
+      "   Use a production WSGI server instead.\n",
+      " * Debug mode: on\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      " * Restarting with stat\n"
+     ]
+    },
+    {
+     "ename": "SystemExit",
+     "evalue": "1",
+     "output_type": "error",
+     "traceback": [
+      "An exception has occurred, use %tb to see the full traceback.\n",
+      "\u001b[1;31mSystemExit\u001b[0m\u001b[1;31m:\u001b[0m 1\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "C:\\Users\\Michael\\Anaconda3\\lib\\site-packages\\IPython\\core\\interactiveshell.py:3334: UserWarning: To exit: use 'exit', 'quit', or Ctrl-D.\n",
+      "  warn(\"To exit: use 'exit', 'quit', or Ctrl-D.\", stacklevel=1)\n"
+     ]
+    }
+   ],
    "source": [
     "import numpy as np\n",
-    "\n",
     "import sqlalchemy\n",
     "from sqlalchemy.ext.automap import automap_base\n",
     "from sqlalchemy.orm import Session\n",
     "from sqlalchemy import create_engine, func\n",
-    "\n",
     "from flask import Flask, jsonify\n",
-    "\n",
     "\n",
     "#################################################\n",
     "# Database Setup\n",
@@ -33,7 +66,6 @@
     "# Flask Setup\n",
     "#################################################\n",
     "app = Flask(__name__)\n",
-    "\n",
     "\n",
     "#################################################\n",
     "# Flask Routes\n",
@@ -92,6 +124,13 @@
     "if __name__ == '__main__':\n",
     "    app.run(debug=True)\n"
    ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
   }
  ],
  "metadata": {
