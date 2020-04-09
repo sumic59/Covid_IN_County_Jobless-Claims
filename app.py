@@ -44,7 +44,7 @@ start = 2008
 end = 2018
 series = ['LAUCN180110000000003','LAUCN180110000000004','LAUCN180110000000005','LAUCN180110000000006']
 
-df = get_bls_data(series=series, start=start, end=end)
+#df = get_bls_data(series=series, start=start, end=end)
 
 #################################################
 # Flask Setup
@@ -59,7 +59,16 @@ app = Flask(__name__)
 @app.route("/")
 def index():
     """Return the homepage."""
-    return render_template("index.html")
+    return render_template("CountyPlot.html")
+    #return render_template("index.html")
+
+@app.route("/countynames")
+def names():
+    """Return a list of sample names."""
+    sampleNames = {'County': 1},{'County': 2},{'County': 3}
+    # Return a list of the county  names (sample names)
+    print(sampleNames)
+    return sampleNames
 
 @app.route("/County-1.html")
 def index1():
@@ -91,15 +100,15 @@ def booneData():
     """Return the homepage."""
     return render_template("BooneData.html")
 
-df.value=df.value.astype(float)
-df.year = df.year.astype(int)
+# df.value=df.value.astype(float)
+# df.year = df.year.astype(int)
 
-from sqlalchemy import create_engine
-db = create_engine('sqlite:///project2.sqlite')
+# from sqlalchemy import create_engine
+# db = create_engine('sqlite:///project10.sqlite')
 
-country_data = df.to_sql('CountyUnemployment', con=db, if_exists='append')
-country_data = pd.read_sql_query('SELECT * FROM CountyUnemployment LIMIT 3',db)
-country_data.head()
+# country_data = df.to_sql('RecessionCountyData', con=db, if_exists='append')
+# country_data = pd.read_sql_query('SELECT * FROM RecessionCountyData LIMIT 3',db)
+# country_data.head()
 
 # writer = pd.ExcelWriter('bls1.xlsx', engine='xlsxwriter', options={'strings_to_numbers': True})
 # df.to_excel(writer, sheet_name='Sheet1', index=False)
