@@ -4,6 +4,15 @@ import prettytable
 import xlwt
 import pandas as pd
 import matplotlib.pyplot as plt
+import datetime as dt
+import numpy as np
+import pandas as pd
+
+import sqlalchemy
+from sqlalchemy.ext.automap import automap_base
+from sqlalchemy.orm import Session
+from sqlalchemy import create_engine, func
+from flask import Flask, jsonify, render_template
 
 
 def get_bls_data(series, start, end):
@@ -37,23 +46,64 @@ series = ['LAUCN180110000000003','LAUCN180110000000004','LAUCN180110000000005','
 
 df = get_bls_data(series=series, start=start, end=end)
 
-print (df.dtype)
-print (df.dtype)
+#################################################
+# Flask Setup
+#################################################
+app = Flask(__name__)
+
+
+#################################################
+# Flask Routes
+#################################################
+
+@app.route("/")
+def index():
+    """Return the homepage."""
+    return render_template("index.html")
+
+@app.route("/County-1.html")
+def index1():
+    """Return the homepage."""
+    return render_template("County-1.html")
+
+@app.route("/County-2.html")
+def index2():
+    """Return the homepage."""
+    return render_template("County-2.html")
+
+@app.route("/County-3.html")
+def index3():
+    """Return the homepage."""
+    return render_template("County-3.html")
+
+@app.route("/WarrickData.html")
+def warrickData():
+    """Return the homepage."""
+    return render_template("WarrickData.html")
+
+@app.route("/LakeData.html")
+def lakeData():
+    """Return the homepage."""
+    return render_template("LakeData.html")
+
+@app.route("/BooneData.html")
+def booneData():
+    """Return the homepage."""
+    return render_template("BooneData.html")
 
 df.value=df.value.astype(float)
 df.year = df.year.astype(int)
 
+from sqlalchemy import create_engine
+db = create_engine('sqlite:///project2.sqlite')
+
+country_data = df.to_sql('CountyUnemployment', con=db, if_exists='append')
+country_data = pd.read_sql_query('SELECT * FROM CountyUnemployment LIMIT 3',db)
+country_data.head()
 
 # writer = pd.ExcelWriter('bls1.xlsx', engine='xlsxwriter', options={'strings_to_numbers': True})
 # df.to_excel(writer, sheet_name='Sheet1', index=False)
 # writer.save()
 #print (df)
-df.plot(kind='bar',x='year',y='value',color='red')
-plt.show()
-
-# ax = plt.gca()
-
-#df.plot(kind='line',x='year',y='value',ax=ax)
-#df.plot(kind='line',x='period',y='value', color='red', ax=ax)
-
-plt.show()
+if __name__ == '__main__':
+    app.run()
