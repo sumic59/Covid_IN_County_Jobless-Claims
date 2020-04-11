@@ -3,32 +3,33 @@ function buildCharts(sample) {
   // @TODO: Use `d3.json` to fetch the sample data for the plots
   d3.json("static/data/BooneData.json").then(function(data) {
 
-    // Grab the values from the json data
+   // Grab the values from the json data
     var yearData = [];
     for (var i = 0; i < 12; i++) {
       yearData.push(data.periodName[i]);
+      console.log(data.periodName[i]);
     }
     var unemployData = [];
     for (var i = 0; i < 12; i++) {
-      unemployData.push(sampleNames.Unemployed[i]);
+      unemployData.push(data.Unemployed[i]);
+      console.log(data.Unemployed[i]);
     }
     // @TODO: Build a Bubble Chart using the sample data
     var trace1 = {
       x: yearData,
       y: unemployData,
-      type: 'bar'
-      // mode: 'markers',
-      // marker: {
-      //   size: sample_values,
-      //   color: otu_ids
-      // },
-      // text: otu_labels
+      type: 'bar',      
+      mode: 'markers'
+      //  marker: {         
+      //    color: "green"
+      //  }
     };
     
     var data1 = [trace1];
 
     var layout = {
-      showlegend: false
+      showlegend: true,
+      title: "2018 Unemployment Data"
     };
 
     Plotly.newPlot('bubble', data1, layout);
@@ -83,6 +84,7 @@ function init() {
     .append("option")
     .text("County_" + "Warrick1")
     .property("value", "WarrickData1");  
+
   const firstSample = "BooneData";
   buildCharts(firstSample);
   //    buildMetadata(firstSample);
