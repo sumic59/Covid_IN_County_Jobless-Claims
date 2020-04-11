@@ -65,7 +65,8 @@ def index():
 @app.route("/countynames")
 def names():
     """Return a list of sample names."""
-    sampleNames = {'County': 1},{'County': 2},{'County': 3}
+    data  = {"County": "1"},{"County": "2"},{"County": "3"}
+    sampleNames = jsonify(data)
     # Return a list of the county  names (sample names)
     print(sampleNames)
     return sampleNames
@@ -79,6 +80,7 @@ def index1():
 def index2():
     """Return the homepage."""
     return render_template("County-2.html")
+
 
 @app.route("/County-3.html")
 def index3():
