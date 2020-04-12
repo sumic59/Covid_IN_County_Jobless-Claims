@@ -1,65 +1,76 @@
 function buildCharts(sample) {
 
   // @TODO: Use `d3.json` to fetch the sample data for the plots
-  d3.json("static/data/BooneData.json").then(function(data) {
+  d3.json("static/data/" + sample +".json").then(function(data) {
 
+    
    // Grab the values from the json data
     var yearData = [];
     for (var i = 0; i < 12; i++) {
       yearData.push(data.periodName[i]);
-      console.log(data.periodName[i]);
+      //console.log(data.periodName[i]);
     }
     var unemployData = [];
     for (var i = 0; i < 12; i++) {
       unemployData.push(data.Unemployed[i]);
-      console.log(data.Unemployed[i]);
+      //console.log(data.Unemployed[i]);
     }
-    // @TODO: Build a Bubble Chart using the sample data
-    var trace1 = {
-      x: yearData,
-      y: unemployData,
-      type: 'bar',      
-      mode: 'markers'
-      //  marker: {         
-      //    color: "green"
-      //  }
-    };
+    var ctx = document.getElementById("myChart").getContext("2d");
+    var myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                    labels: yearData,
+            datasets: [
+            {
+                    label: "2008 Recession",
+                    fillColor: "blue",
+                    strokeColor: "yellow",
+                    pointColor: "red",
+                    pointStrokeColor: "grey",
+                    pointHighlightFill: "purple",
+                    pointHighlightStroke: "green",
+                    data: unemployData
+            }
+            ]}
+});
+});
+}
+
+function buildWeeklyReport(sample) {
+
+  // @TODO: Use `d3.json` to fetch the sample data for the plots
+  d3.json("static/data/Weekly" + sample +".json").then(function(data) {
     
-    var data1 = [trace1];
-
-    var layout = {
-      showlegend: true,
-      title: "2018 Unemployment Data"
-    };
-
-    Plotly.newPlot('bubble', data1, layout);
-
-    // // @TODO: Build a Pie Chart
-    // // HINT: You will need to use slice() to grab the top 10 sample_values,
-    // // otu_ids, and labels (10 each).
-
-    // var sample_data = otu_ids.map( (x, i) => {
-    //   return {"otu_ids": x, "otu_labels": otu_labels[i], "sample_values": sample_values[i]}        
-    // });
-
-    // sample_data = sample_data.sort(function(a, b) {
-    //   return b.sample_values - a.sample_values;
-    // });
-
-    // sample_data = sample_data.slice(0, 10);
-
-    // var trace2 = {
-    //   labels: sample_data.map(row => row.otu_ids),
-    //   values: sample_data.map(row => row.sample_values),
-    //   hovertext: sample_data.map(row => row.otu_labels),
-    //   type: 'bar'
-    // };
-
-    // var data2 = [trace2];
-
-    // Plotly.newPlot("pie", data2);
-
-  });
+    // Grab the values from the json data
+     var yearData = [];
+     for (var i = 0; i < 12; i++) {
+       yearData.push(data.Week[i]);
+       console.log(data.Week[i]);
+     }
+     var unemployData = [];
+     for (var i = 0; i < 12; i++) {
+       unemployData.push(data.Claims[i]);
+       console.log(data.Claims[i]);
+     }
+     var ctx = document.getElementById("claimChart").getContext("2d");
+     var myChart = new Chart(ctx, {
+             type: 'line',
+             data: {
+                     labels: yearData,
+             datasets: [
+             {
+                     label: "2020 Claims dataset",
+                     fillColor: "rgba(220,220,220,0.2)",
+                     strokeColor: "rgba(220,220,220,1)",
+                     pointColor: "rgba(220,220,220,1)",
+                     pointStrokeColor: "#fff",
+                     pointHighlightFill: "#fff",
+                     pointHighlightStroke: "rgba(220,220,220,1)",
+                     data: unemployData
+             }
+             ]}
+ });
+});
 }
 
 function init() {
@@ -80,19 +91,16 @@ function init() {
     .append("option")
     .text("County_" + "Warrick")
     .property("value", "WarrickData");
-  selector
-    .append("option")
-    .text("County_" + "Warrick1")
-    .property("value", "WarrickData1");  
-
+  
   const firstSample = "BooneData";
   buildCharts(firstSample);
-  //    buildMetadata(firstSample);
+  buildWeeklyReport(firstSample);
 }
 
 function optionChanged(newSample) {
   // Fetch new data each time a new sample is selected
   buildCharts(newSample); 
+  buildWeeklyReport(newSample);
 }
 
 // Initialize the dashboard
