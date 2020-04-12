@@ -27,7 +27,7 @@ function buildPlot() {
   var selector = d3.select("#selDataset");
 
   //read the json file
-  d3.json("data/Marion_Co_unemployment_stats.json").then((sampleNames) => {
+  d3.json("../data/Marion_Co_unemployment_stats.json").then((sampleNames) => {
 
     var xAxisDataOldRecession = [];
     for (var i = 23; i < 120; i++) {
