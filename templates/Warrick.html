@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>County Comparison Visualization Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+
+  <!--CSS Link-->
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<body>
+  <!-- Navigation Section -->
+  <div class="navigation">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand" style="background-color: #0BADA6;" href="index.html">Project-2</a>
+      <button class="navbar-toggler  border border-white" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              County
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="Allen.html">Allen</a>
+              <a class="dropdown-item" href="Boone.html">Boone</a>
+              <a class="dropdown-item" href="Decatur.html">Decatur</a>
+              <a class="dropdown-item" href="Hamilton.html">Hamilton</a>
+              <a class="dropdown-item" href="Hendricks.html">Hendricks</a>
+              <a class="dropdown-item" href="Johnson.html">Johnson</a>
+              <a class="dropdown-item" href="Lake.html">Lake</a>
+              <a class="dropdown-item" href="Marion.html">Marion</a>
+              <a class="dropdown-item" href="Monroe.html">Monroe</a>
+              <a class="dropdown-item" href="StJoseph.html">St.Joseph</a>
+              <a class="dropdown-item" href="vanderburgh.html">Vanderburgh</a>
+              <a class="dropdown-item" href="Warrick.html">Warrick</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="BooneData.html">Data</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <!-- Content Section -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center">
+        <h1>County Recession Dashboard</h1>
+        <p>Use the interactive charts below to explore the dataset</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2">
+        <div class="well">
+          <h5>County:</h5>
+          <select id="selDataset" onchange="optionChanged(this.value)">
+          </select>
+        </div>        
+      </div>
+      <div class="col-md-5">
+        <canvas id="myChart" width="100" height="50"></canvas>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2">
+      </div>
+      <div class="col-md-5">
+        <canvas id="claimChart" width="100" height="50"></canvas>
+      </div>
+    </div>
+  </div>
+  <!-- Footer Section -->
+  <footer>
+    <div class="footer">Copyright &copy; 2020</div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.plot.ly/plotly-1.31.2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://www.jsdelivr.com/package/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+</body>
+
+</html>
