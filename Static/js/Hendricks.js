@@ -27,7 +27,7 @@ function plotBarChart(x, y, loc) {
     var selector = d3.select("#selDataset");
   
     //read the json file
-    d3.json("json/Hendricks_Co_unemployment_stats").then((sampleNames) => {
+    d3.json("static/data/Hendricks_Co_unemployment_stats").then((sampleNames) => {
   
       var xAxisDataOldRecession = [];
       for (var i = 23; i < 120; i++) {

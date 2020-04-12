@@ -27,8 +27,8 @@ function buildPlot() {
   var selector = d3.select("#selDataset");
 
   //read the json file
-  d3.json("json/Allen_Co_unemployment_stats.json").then((sampleNames) => {
-
+  d3.json("static/data/Allen_Co_unemployment_stats.json").then((sampleNames) => {
+    console.log(sampleNames);
     var xAxisDataOldRecession = [];
     for (var i = 23; i < 120; i++) {
       xAxisDataOldRecession.push(sampleNames.YearMonth[i]);
@@ -37,7 +37,7 @@ function buildPlot() {
     for (var i = 23; i < 120; i++) {
       yAxisDataOldRecession.push(sampleNames.Unemployment_Rate[i]);
     }
-
+    console.log(xAxisDataOldRecession);
     plotBarChart(xAxisDataOldRecession, yAxisDataOldRecession, "oldbar");
 
     console.log(sampleNames.YearMonth.length);
