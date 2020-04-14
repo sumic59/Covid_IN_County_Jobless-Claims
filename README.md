@@ -6,7 +6,7 @@ Jupyter File - Read 3 County Unemployment data for 2008
   3. Try a Bar graph
   4. Save the data frame as HTML
   5. Save the data frame as Json for Charts in app.js 2020 Claims data
-  6. Read the CSV data for 3 county
+  6. Read the CSV data for 3 county Weekly claims data
   7. Convert to HTML and JSON
 
 HTML Changes :
