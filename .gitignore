@@ -1,6 +1,5 @@
 # API Keys
-config.js
-config.py
+
 
 # Word temporary
 ~$*.doc*
@@ -18,7 +17,7 @@ config.py
 *.~vsd*
 
 # Editor
-.vscode
+
 
 # Jupyter Checkpoints
 .ipynb_checkpoints
