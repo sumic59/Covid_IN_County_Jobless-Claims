@@ -30,4 +30,4 @@ App.js :
   1. init() - Logic to add Options to be displayed in Select Option.
   2. buildCharts() - Logic to get 2008 Recession Json data and display Line graph using Chart.js
   3. buildWeeklyReport() - Logic to get 2020 Claims Json data and display Line graph using Chart.js
-  4. optionChanged() - When c county is selected in drop down ( Boone, Lake, Warrick htmls ) - Dynamically derive the Line graph using Chart.js 
+  4. optionChanged() - When a county is selected in drop down ( Boone, Lake, Warrick ) - Dynamically derive the Line graph using Chart.js 
