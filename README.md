@@ -10,9 +10,14 @@ Jupyter File - Read 3 County Unemployment data for 2008
   7. Convert to HTML and JSON
 
 HTML Changes :
-   1. Created a index page the following a. Dropdown link for each county b. Some verbage after the county
-  2. When a county is selected a. Display the county html b. Dynamically generate 2008 Unemployment LINE graph using Chart.js c. 
-  3. Dynamically generate 2020 Claims LINE graph using Chart.js
+   1. Created a index page the following 
+    a. Dropdown link for each county 
+    b. Some verbage after the county
+    c. Inserted SVG - Scalable Vector graphics for Indiana state - diaplaying all county with Covid Data
+  2. When a county is selected 
+    a. Display the county html 
+    b. Dynamically generate 2008 Unemployment LINE graph using Chart.js 
+    c. Dynamically generate 2020 Weekly Claims LINE graph using Chart.js
   4. Added "Data" hyperlink in Index.html a. Each County html's "Data" hyperlink will open the 2008 Graph data.
 
 Python Changes :
