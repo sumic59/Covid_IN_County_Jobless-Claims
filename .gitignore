@@ -6,6 +6,7 @@ config.py
 # Files for this project to ignore
 MRD_Unemployment_And_Covid_Data_v2.ipynb
 temporary
+gsheets_key.json
 # ----------------------------------------
 
 # Word temporary
