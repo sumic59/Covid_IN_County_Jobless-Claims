@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "vaulted-sol-274300",
+  "private_key_id": "193980403dbb2e1f19e7e9953f74a6bc33fd2373",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC3eEA8H8j2SBPT\nj2mtkVL+FsATcl0HDoKvktZCpN5C1R17ZDvr3DpFfDHD369A0icP353RVbrJ4mqE\nvTnpJMdvCxRv9Q0ML6JA1qjB5XngnG2X4iQHbqPCNu0FaarXAAWycFk+FPSaQITq\noMJWohONTetvHM64VRTO2jWuMkFrI4C/qEQ1ydvHDG67H6BPkYJxCRYttC9ju8fA\nByPVZEyCgpwsPgxrqenqQX4Cjgvz08QuFdXji4gYoWSjTxwbfUEZeIfkb8b2scjx\nZkda+iHTnDFvwM5AlHnW+oFfZJvaozKCbhlqFDDHwLnn+1zo/a8IBF8Kgn78qkDw\n1weYVJ2FAgMBAAECggEACv7kPKY8BVSfCZIiB4K66lsDMncrb6GVQAAJIs/eOTus\nC2nftHxLqr/tfJuClZwytp8UhogAjJpq/18W4ivv3u4XULlrSYRuUTv8O7is1AMU\nB2MIfUCKhHiFvooNcNrBvKbClnerjDYbMTOmygnnKZQWrN9ZXU9OErKdvn2pEYpi\nWmhupoGoiEFBRkHh/zQqOgcKbHcPoIRd8LobqjfGl7LQ37DzDQKF6vwH2ZFePHqc\nsCqXBYjHXJkoJebXug0fCc97c0yWW084wrir/5KoqM/Th2q2eGn8iH09UlYAlRpT\nMXifHBag8/ZdeDJvoxKoBL35kNeZz5cWQ552u73UeQKBgQDrw6/Rnjc2BND6Xf/T\nfdvmBCXuYeWAte4zS81R7hpBBeBjAWf0DY3c2l1pI4Xf7ZIbfVoUdzhaklmOiEpa\nIHtAHg0wszbPZtCZOmsCxSr4ZcY5MYzWoQ014s5/0+KxR5nc77S9aFOa2/kd0+eQ\nCvYFwBdmwLDhuCPt6Q6zI8WR2QKBgQDHN4YfdmTPHo2sewfEA70cZ5ctoQ1T9p9r\nvqOLZJzZQM6SXKjYrQB4Li94RsN85zFvaftOs/vpiU9lq8L4Hfw/ALKDchJKXDSL\nJVjpz1WO+iWoxqseYQrgycXJruCsTpLjTE/ltnT+XJSxwxnKhTTv7GaiwU96WlEd\n2T9WQCbxjQKBgEjALr3RQ5owrEfFv86ENNnqh8XigY5RFXrQtj/E6GcOKCqE4Y4G\nrLLs0wxBgOsThRVkfep4y3PvWyFHXyImicHERC+17YDcahwOUb0eGF9kEGHPr3T/\nZ3MsVKpPONGZlZn+gdg8nCfaHyocHIVvTHGDz/TOGwbb6oJce0O+ExYpAoGAXimn\ncr2iXqfhbTJl9EeUHpX0RjQGubYrmmDsqplu7d2NBm9Xu7riKuwhsec4xZP9sNzW\nVVgLbVJivfrW2DJMJXdt6WWEsbMtfsuzYCiJF2CzZjgpb92Mp72XiIHpXmhxU5Ch\nf0GjwQr/mZpPWYNnBzSlOq7Go12HU+V444rFHY0CgYEAoccYiUTM6Z/bmuA2oi24\niCmR1TsydQWJbZV3eQMsZrV/2+9bJoi91ZzQ7QnJtVXkmT5iSyQlMXv/zwzo/Ysv\nKFDmWI22xmXwGrPyIKgMfU3r995oeyyniHN5lo7AqW8YtX/E5lLwHQadUjSAuxbG\nesWZwFvNkc+vDrbOQIqVzUk=\n-----END PRIVATE KEY-----\n",
+  "client_email": "covid-project-2@vaulted-sol-274300.iam.gserviceaccount.com",
+  "client_id": "113722568285084919186",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/covid-project-2%40vaulted-sol-274300.iam.gserviceaccount.com"
+}
