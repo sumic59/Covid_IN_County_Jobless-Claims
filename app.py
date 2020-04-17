@@ -44,6 +44,9 @@ start = 2008
 end = 2018
 series = ['LAUCN180110000000003','LAUCN180110000000004','LAUCN180110000000005','LAUCN180110000000006']
 
+
+
+TRIED TO READ THE BLS DATA USING PYTHON CODEBASE, BUT THEN ENDED UP USING JYPYTER NOTEBOOK
 #df = get_bls_data(series=series, start=start, end=end)
 
 #################################################
