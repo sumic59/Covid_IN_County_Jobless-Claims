@@ -21,14 +21,43 @@ function plotBarChart(x, y, loc) {
   Plotly.newPlot(loc, data, layout);
 }
 
-function buildPlot() {
+function plotMixedChart(x, lineY, barY) {
+  new Chart(document.getElementById("mixed-chart"), {
+    type: 'bar',
+    data: {
+      labels: x,
+      datasets: [{
+          label: "Covid Cases",
+          type: "line",
+          borderColor: "#8e5ea2",
+          data: lineY,
+          fill: false
+        }, {
+          label: "Unemployment Claims",
+          type: "bar",
+          backgroundColor: "rgba(0,0,0,0.2)",
+          data: barY,
+        }
+      ]
+    },
+    options: {
+      title: {
+        display: true,
+        text: 'Covid Cases Versus The Unemployment Claims'
+      },
+      legend: { display: false }
+    }
+  });
+}
+
+function readUnemploymentData() {
 
   // Grab a reference to the dropdown select element
   var selector = d3.select("#selDataset");
 
   //read the json file
   d3.json("static/data/Hamilton_Co_unemployment_stats.json").then((sampleNames) => {
-    console.log(sampleNames);
+
     var xAxisDataOldRecession = [];
     for (var i = 23; i < 120; i++) {
       xAxisDataOldRecession.push(sampleNames.YearMonth[i]);
@@ -37,7 +66,7 @@ function buildPlot() {
     for (var i = 23; i < 120; i++) {
       yAxisDataOldRecession.push(sampleNames.Unemployment_Rate[i]);
     }
-    console.log(xAxisDataOldRecession);
+
     plotBarChart(xAxisDataOldRecession, yAxisDataOldRecession, "oldbar");
 
     console.log(sampleNames.YearMonth.length);
@@ -56,4 +85,25 @@ function buildPlot() {
   });
 }
 
-buildPlot();
+function readCovidUempClaimsData() {
+  d3.json("static/data/Hamilton__covid_weekly_claims.json").then((data) => {
+
+    var xAxisDate = [];
+    for (var i = 1; i < 48; i++) {
+      xAxisDate.push(data.Date[i]);
+    }
+    var yAxisCovidData = [];
+    for (var i = 1; i < 48; i++) {
+      yAxisCovidData.push(data.Count[i]);
+    }
+    var yAxisClaimsData = [];
+    for (var i = 1; i < 48; i++) {
+        yAxisClaimsData.push(data.InitialClaims[i]);
+    }
+    console.log(yAxisClaimsData);
+    plotMixedChart(xAxisDate, yAxisCovidData, yAxisClaimsData);
+  });
+}
+
+readUnemploymentData();
+readCovidUempClaimsData();
