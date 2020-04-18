@@ -86,7 +86,7 @@ function readUnemploymentData() {
 }
 
 function readCovidUempClaimsData() {
-  d3.json("static/data/Hamilton__covid_weekly_claims.json").then((data) => {
+  d3.json("static/data/Hamilton_covid_weekly_claims.json").then((data) => {
 
     var xAxisDate = [];
     for (var i = 1; i < 48; i++) {

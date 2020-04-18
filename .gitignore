@@ -2,6 +2,8 @@
 config.js
 config.py
 
+gsheets_key.json
+
 # Word temporary
 ~$*.doc*
 

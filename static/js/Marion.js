@@ -56,7 +56,7 @@ function readUnemploymentData() {
   var selector = d3.select("#selDataset");
 
   //read the json file
-  d3.json("../data/Marion_Co_unemployment_stats.json").then((sampleNames) => {
+  d3.json("static/data/Marion_Co_unemployment_stats.json").then((sampleNames) => {
 
     var xAxisDataOldRecession = [];
     for (var i = 23; i < 120; i++) {
@@ -86,7 +86,7 @@ function readUnemploymentData() {
 }
 
 function readCovidUempClaimsData() {
-  d3.json("../data/Marion_covid_weekly_claims.json").then((data) => {
+  d3.json("static/data/Marion_covid_weekly_claims.json").then((data) => {
 
     var xAxisDate = [];
     for (var i = 1; i < 48; i++) {
