@@ -9,12 +9,12 @@
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="/static/css/reset.css">
-  <link rel="stylesheet" href="/static/css/style.css">
+  <link rel="stylesheet" href="/static/css/anotherstyle.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 </head>
 
-<body data-aos-easing="ease-out-back" data-aos-duration="1000" data-aos-delay="0">
+<body>
   <!-- Navigation Section -->
   <div class="navigation">
     <nav class="navbar navbar-expand-lg navbar-light">
@@ -53,37 +53,78 @@
 
   <!-- Content Section -->
   <div class="container">
-    <div class="backgrounds">
-			<div class="background aos-init aos-animate" data-aos="fade-in" data-aos-duration="1500" data-aos-anchor=".section--hero"></div>
-		</div>
-    <h2  align="center" class="section-title">The Story</h2>
-
-    <div class="item" data-aos="flip-up">2</div>
-
-    <h2  align="center" class="section-title">The JavaScript Libraries We Used</h2>
-
-    <div class="item" data-aos="fade-up-right">
-      <img class="panel" src="/static/img/AOS.png" alt="AOS">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="box">
+          <h3  align="center" class="section-title">The Story</h3>
+          <hr>
+          <div class="item" data-aos="flip-up">
+            <img src="/static/img/Unemployment2008.png" class="vizualization rounded float-left" alt="Unemployment During 2008">
+          </div>
+          <div class="item" data-aos="flip-up">
+            <img src="/static/img/Unemployment2020.png" class="vizualization rounded float-left" alt="Unemployment During 2020">
+          </div>
+          <div class="item" data-aos="flip-up">
+            <img src="/static/img/2008Line.png" class="vizualization rounded float-left" alt="Unemployment During 2008 Line">
+          </div>
+          <div class="item" data-aos="flip-up">
+            <img src="/static/img/ClaimsAndCovid.png" class="vizualization rounded float-left" alt="Unemployment Claims and Covid cases">
+          </div>
+          <div class="item" data-aos="flip-up">
+            <p> In this project we compared the unemployment rate in 2008
+              time period in Indiana to unemployment rate in 2020. We also
+              visualised how unemployment claims were impacted due to Covid-19
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="item" data-aos="fade-up-left">
-      <img class="panel" src="/static/img/ChartJS.png" alt="Chart JS">
-    </div>
-    <div class="item" data-aos="fade-up-right">
-      <img class="panel" src="/static/img/D3JS.png" alt="D3">
-    </div>
-
-    <h2  align="center" class="section-title">Architecture</h2>
-    <div class="item1" data-aos="fade-up-left">
-      <img class="panel" src="/static/img/Project-2.jpg" alt="Architecture">
-    </div>
-
-    <h2  align="center" class="section-title">The Libraries We Used</h2>
-    <div class="item" data-aos="flip-up">2</div>
-    <h2  align="center" class="section-title">The Team</h2>
-    <div class="item" data-aos="flip-up">2</div>
-    <h2  align="center" class="section-title">The Sources</h2>
-    <div class="item" data-aos="fade-left">4</div>
   </div>
+  <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="box">
+            <h3  align="center" class="section-title">The JavaScript Libraries We Used</h3>
+            <hr>
+            <div class="item" data-aos="fade-up-right">
+            <img class="panel" src="/static/img/AOS.png" alt="AOS">
+            </div>
+            <div class="item" data-aos="fade-up-left">
+            <img class="panel" src="/static/img/ChartJS.png" alt="Chart JS">
+            </div>
+            <div class="item" data-aos="fade-up-right">
+            <img class="panel" src="/static/img/D3JS.png" alt="D3">
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="box">
+            <h3  align="center" class="section-title">Architecture</h3>
+            <hr>
+            <div class="item1" data-aos="fade-up-left">
+              <img class="panel" src="/static/img/Project-2.jpg" alt="Architecture">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h4  align="center" class="section-title">The Team</h4>
+          <div class="item" data-aos="flip-up"></div>
+          <h4  align="center" class="section-title">The Sources</h4>
+          <div class="item" data-aos="fade-left"></div>
+        </div>
+      </div>
+    </div>
+
   <!-- Footer Section -->
   <footer>
     <div class="footer">Copyright &copy; the internet gods</div>
