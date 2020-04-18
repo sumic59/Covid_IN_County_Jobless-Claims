@@ -18,8 +18,7 @@ def home():
 
 @app.route("/index.html")
 def welcome():
-    message = "The Reaper Project"
-    return render_template("index.html", message=message)
+    return render_template("index.html")
 
 @app.route("/Allen.html")
 def Allen():

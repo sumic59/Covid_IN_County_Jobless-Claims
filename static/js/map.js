@@ -18,13 +18,14 @@ queue()
 	.defer(d3.json, "https://raw.githubusercontent.com/no-stack-dub-sack/testable-projects-fcc/master/src/data/choropleth_map/counties.json")
 	.await(ready);
 
-var legendText = ["", "10%", "", "15%", "", "20%", "", "25%"];
+var legendText = ["", ">100", "", ">1000", "", ">3000", "", ">5000"];
 var legendColors = ["#fff7bc", "#fee391", "#fec44f", "#fe9929", "#ec7014", "#cc4c02", "#993404", "#662506"];
 
 
 function ready(error, data, us) {
 
 	var counties = topojson.feature(us, us.objects.counties);
+	console.log(counties);
 
 	data.forEach(function(d) {
 		d.Date = +d.Date;
@@ -32,17 +33,18 @@ function ready(error, data, us) {
 		d.InitialClaims = +d.InitialClaims;
 	});
 
-	var dataByCountyByYear = d3.nest()
+	var dataByCountyByDate = d3.nest()
 		.key(function(d) { return d.Fips; })
 		.key(function(d) { return d.Date; })
 		.map(data);
 
+	console.log(dataByCountyByDate);
   counties.features.forEach(function(county) {
-		county.properties.years = dataByCountyByYear[+county.id]
+		county.properties.years = dataByCountyByDate[+county.id]
   });
 
 	var color = d3.scale.threshold()
-		.domain([10, 12.5, 15, 17.5, 20, 22.5, 25])
+		.domain([10, 100, 500, 1000, 2000, 3000, 5000])
 		.range(["#fff7bc", "#fee391", "#fec44f", "#fe9929", "#ec7014", "#cc4c02", "#993404", "#662506"]);
 
 	var projection = d3.geo.albersUsa()
@@ -63,13 +65,14 @@ function ready(error, data, us) {
 			tooltip.transition()
 			.duration(250)
 			.style("opacity", 1);
-			tooltip.html(
-				"<p><strong>" + d.properties.dates[20200110][0].county + "</strong></p>" +
-				"<table><tbody><tr><td class='wide'>Unemployment Rate in Jan 2020:</td><td>" + d.properties.dates[20200110][0].initialClaims + "</td></tr>" +
-				"<tr><td>Unemployment Rate in April 2020:</td><td>" + d.properties.dates[20200410][0].initialClaims + "</td></tr></tbody></table>"
-			)
-			.style("left", (d3.event.pageX + 15) + "px")
-			.style("top", (d3.event.pageY - 28) + "px");
+			console.log(d);
+			//tooltip.html(
+			//	"<p><strong>" + d.properties.dates[20200110][0].county + "</strong></p>" +
+			//	"<table><tbody><tr><td class='wide'>Unemployment Rate in Jan 2020:</td><td>" + d.properties.dates[20200110][0].initialClaims + "</td></tr>" +
+			//	"<tr><td>Unemployment Rate in April 2020:</td><td>" + d.properties.dates[20200410][0].initialClaims + "</td></tr></tbody></table>"
+			//)
+			//.style("left", (d3.event.pageX + 15) + "px")
+			//.style("top", (d3.event.pageY - 28) + "px");
 		})
 		.on("mouseout", function(d) {
 			tooltip.transition()
@@ -125,7 +128,7 @@ function ready(error, data, us) {
 				update(Date);
 			});
 
-			date(20200110);
+		//date(20200110);
 
 }
 
