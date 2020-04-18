@@ -1,119 +1,105 @@
-<!DOCTYPE HTML>
-<meta charset="utf-8">
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Unemployment 2008-20</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400italic,600italic,700italic,200,300,400,600,700,900">
-<script src="https://d3js.org/d3.v3.min.js"></script>
-<script src="https://d3js.org/queue.v1.min.js"></script>
-<script src="https://d3js.org/topojson.v1.min.js"></script>
-
-<style>
-
-body, h1, h2, h3, p {
-  margin: 0;
-  padding: 0;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 1em;
-  color: #333;
-  font-weight: 400;
-}
-
-#content {
-  margin: 5px;
-  padding: 20px;
-  width: 805px;
-  border: 1px solid #ccc;
-}
-
-#map {
-  margin: 10px 0px 0px 0px;
-  padding: 0px;
-}
-
-h1, h2 {
-  line-height: 1em;
-  font-size: 1.75em;
-  font-weight: 900;
-  color: #000;
-}
-
-h2.year {
-  margin: 10px 0px 0px 0px;
-  font-size: 1.3em;
-  font-weight: 700;
-}
-
-p {
-  margin: 10px 0px 0px 0px;
-}
-
-.county {
-  fill: #fff;
-}
-
-.states {
-  fill: none;
-  stroke: #fff;
-  stroke-linejoin: round;
-}
-
-input {
-  display: block;
-  width: 200px;
-  margin: 10px 0px 0px 0px;
-}
-
-#legend text {
-  font-size: 0.9em;
-  color: #333;
-  font-weight: 400;
-}
-
-.tooltip {
-  position: absolute;
-  padding: 7px;
-  font-size: 0.9em;
-  pointer-events: none;
-  background: #fff;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-
-  -moz-box-shadow:    3px 3px 10px 0px rgba(0, 0, 0, 0.25);
-  -webkit-box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.25);
-  box-shadow:         3px 3px 10px 0px rgba(0, 0, 0, 0.25);
-}
-
-.tooltip p {
-  margin: 0;
-  padding: 0;
-}
-
-.tooltip table {
-  margin: 0;
-  padding: 0;
-  border-collapse: collapse;
-}
-
-.wide {
-  width: 140px;
-}
-
-</style>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="/static/css/reset.css">
+  <link rel="stylesheet" href="/static/css/style.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 </head>
 
-<body>
+<body data-aos-easing="ease-out-back" data-aos-duration="1000" data-aos-delay="0">
+  <!-- Navigation Section -->
+  <div class="navigation">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand" style="background-color: #0BADA6;" href="index.html">Project-2</a>
+      <button class="navbar-toggler  border border-white" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              County
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="Allen.html">Allen</a>
+              <a class="dropdown-item" href="Boone.html">Boone</a>
+              <a class="dropdown-item" href="Decatur.html">Decatur</a>
+              <a class="dropdown-item" href="Hamilton.html">Hamilton</a>
+              <a class="dropdown-item" href="Hendricks.html">Hendricks</a>
+              <a class="dropdown-item" href="Johnson.html">Johnson</a>
+              <a class="dropdown-item" href="Lake.html">Lake</a>
+              <a class="dropdown-item" href="Marion.html">Marion</a>
+              <a class="dropdown-item" href="Monroe.html">Monroe</a>
+              <a class="dropdown-item" href="StJoseph.html">St.Joseph</a>
+              <a class="dropdown-item" href="Vanderburgh.html">Vanderburgh</a>
+              <a class="dropdown-item" href="Warrick.html">Warrick</a>
+            </div>
+          </li>
 
-<div id="content">
-	<h1>Indiana Unemployment by County</h1>
-	<h2 class="year"></h2>
-	<div class="slider"></div>
-	<div id="map"></div>
-	<p>Source: Indiana Department of Workforce Development.</p>
-</div>
+        </ul>
+      </div>
+    </nav>
+  </div>
 
-<script type="text/javascript" src="/static/js/map.js"></script>
+  <!-- Content Section -->
+  <div class="container">
+    <div class="backgrounds">
+			<div class="background aos-init aos-animate" data-aos="fade-in" data-aos-duration="1500" data-aos-anchor=".section--hero"></div>
+		</div>
+    <h2  align="center" class="section-title">The Story</h2>
+
+    <div class="item" data-aos="flip-up">2</div>
+
+    <h2  align="center" class="section-title">The JavaScript Libraries We Used</h2>
+
+    <div class="item" data-aos="fade-up-right">
+      <img class="panel" src="/static/img/AOS.png" alt="AOS">
+    </div>
+    <div class="item" data-aos="fade-up-left">
+      <img class="panel" src="/static/img/ChartJS.png" alt="Chart JS">
+    </div>
+    <div class="item" data-aos="fade-up-right">
+      <img class="panel" src="/static/img/D3JS.png" alt="D3">
+    </div>
+
+    <h2  align="center" class="section-title">Architecture</h2>
+    <div class="item1" data-aos="fade-up-left">
+      <img class="panel" src="/static/img/Project-2.jpg" alt="Architecture">
+    </div>
+
+    <h2  align="center" class="section-title">The Libraries We Used</h2>
+    <div class="item" data-aos="flip-up">2</div>
+    <h2  align="center" class="section-title">The Team</h2>
+    <div class="item" data-aos="flip-up">2</div>
+    <h2  align="center" class="section-title">The Sources</h2>
+    <div class="item" data-aos="fade-left">4</div>
+  </div>
+  <!-- Footer Section -->
+  <footer>
+    <div class="footer">Copyright &copy; the internet gods</div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="/static/js/logic.js"></script>
 
 </body>
+
 </html>

@@ -1,4 +1,4 @@
-function plotBarChart(x, y, loc) {
+function plotBarChart(x, y, loc, titleName) {
 
   // Trace1 for the horizontal bar chart
   var data = [{
@@ -15,7 +15,7 @@ function plotBarChart(x, y, loc) {
 
   // Apply the group bar mode to the layout
   var layout = {
-    title: "Unemployment Rate"
+    title: titleName
   };
 
   Plotly.newPlot(loc, data, layout);
@@ -67,20 +67,20 @@ function readUnemploymentData() {
       yAxisDataOldRecession.push(sampleNames.Unemployment_Rate[i]);
     }
 
-    plotBarChart(xAxisDataOldRecession, yAxisDataOldRecession, "oldbar");
+    plotBarChart(xAxisDataOldRecession, yAxisDataOldRecession, "oldbar", "Decatur Unemployment Rate from 2008 - 2014");
 
     console.log(Object.keys(sampleNames.YearMonth).length);
 
     var xAxisDataNewRecession = [];
-    for (var i = 120; i < 181; i++) {
+    for (var i = 120; i < Object.keys(sampleNames.YearMonth).length; i++) {
       xAxisDataNewRecession.push(sampleNames.YearMonth[i]);
     }
     var yAxisDataNewRecession = [];
-    for (var i = 120; i < 181; i++) {
+    for (var i = 120; i < Object.keys(sampleNames.YearMonth).length; i++) {
       yAxisDataNewRecession.push(sampleNames.Unemployment_Rate[i]);
     }
 
-    plotBarChart(xAxisDataNewRecession, yAxisDataNewRecession, "newbar");
+    plotBarChart(xAxisDataNewRecession, yAxisDataNewRecession, "newbar", "Decatur Unemployment Rate from 2015 - Current");
 
   });
 }
@@ -89,11 +89,11 @@ function readCovidUempClaimsData() {
   d3.json("static/data/decatur_covid_weekly_claims.json").then((data) => {
 
     var xAxisDate = [];
-    for (var i = 1; i < 48; i++) {
+    for (var i = 1; i < Object.keys(data.Count).length; i++) {
       xAxisDate.push(data.Date[i]);
     }
     var yAxisCovidData = [];
-    for (var i = 1; i < 48; i++) {
+    for (var i = 1; i < Object.keys(data.Count).length; i++) {
       yAxisCovidData.push(data.Count[i]);
     }
     var yAxisClaimsData = [];
