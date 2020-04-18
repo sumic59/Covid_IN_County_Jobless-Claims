@@ -31,7 +31,7 @@ def get_bls_data(series, start, end):
             for i in range(0, len(df_initial) - 1):
                 df_row = pd.DataFrame(df_initial['data'][i])
                 df_row['seriesID'] = series_col
-                if 'code' not in str(df_row['footnotes']): 
+                if 'code' not in str(df_row['footnotes']):
                     df_row['footnotes'] = ''
                 else:
                     df_row['footnotes'] = str(df_row['footnotes']).split("'code': '",1)[1][:1]
@@ -114,7 +114,7 @@ def LakeData():
 
 @app.route("/Marion.html")
 def Marion():
-    return render_template("Marion.html")   
+    return render_template("Marion.html")
 
 @app.route("/Monroe.html")
 def Monroe():
@@ -124,9 +124,9 @@ def Monroe():
 def StJoseph():
     return render_template("StJoseph.html")
 
-@app.route("/vanderburgh.html")
+@app.route("/Vanderburgh.html")
 def vanderburgh():
-    return render_template("vanderburgh.html")
+    return render_template("Vanderburgh.html")
 
 @app.route("/Warrick.html")
 def Warrick():
