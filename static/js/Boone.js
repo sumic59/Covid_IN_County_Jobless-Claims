@@ -18,14 +18,14 @@ function buildCharts(sample) {
       unemployData.push(data.Unemployed[i]);
       //console.log(data.Unemployed[i]);
     }
-    var ctx = document.getElementById("myChart").getContext("2d");
+    var ctx = document.getElementById("unemploymentChart").getContext("2d");
     var myChart = new Chart(ctx, {
             type: 'line',
             data: {
                     labels: yearData,
             datasets: [
             {
-                    label: "2008 Recession",
+                    label: "2008 Recession and Unemployment",
                     data: unemployData
             }
             ]}
