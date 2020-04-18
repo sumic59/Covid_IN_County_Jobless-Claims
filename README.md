@@ -48,6 +48,8 @@ Warrick.js:
   
 Read the BLS data using the sample Python codebase and tried to plot a graph:
 
+    1.  Created a function to 
+
     a. Created a function to read BLS data
     b. Passed the Series, from and to year to the function and the function returns data frame
     c. Displayed the data frame and tried graphs
